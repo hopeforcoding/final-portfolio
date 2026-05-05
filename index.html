@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sisonke Segunda</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- header section with nav bar-->
+    <div class="header-container">
+
+     <h1><a href="index.html">Sisonke Segunda</a></h1>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+    <nav>
+         <ul>
+
+             <li><a href="about.html">About</a></li>
+
+            <li class="has-dropdown"><a href="work.html">Work</a>
+            <ul class="dropdown">
+               <li><a href="work.html#art">Art</a></li>
+               <li><a href="work.html#design">Design</a></li>  
+               <li><a href="work.html#web-development">Web Development</a></li>
+            </ul>
+            </li>
+            <li class="contact-me"><a href="contact.html">Contact</a></li>
+         </ul>
+    </nav> 
+    </div>
+   
+     <!-- main section with charcoal background & categories-->
+    <div class="main">
+        <div class="charcoal-background">
+            <h1 class="headings">Welcome To My World</h1>
+
+        <ul class="categories">
+            <li class="has-dropdown"><a href="#">Design</a>
+            <ul class="dropdown">
+               <li>Branding</li>
+               <li>Editorial</li>  
+               <li>Web Design</li>
+            </ul>
+            </li>
+
+            <li class="charcoal-overlay"> Fine Art</li>
+
+            <li class="has-dropdown"><a href="#">Web Development</a>
+            <ul class="dropdown">
+               <li><img src="images/calculator-app.png" width="100" alt="Image of a calculator app"></li>
+            </ul>
+            </li>
+
+        </ul>
+
+         <h1 class="headings">Where Artistic Thinking Meets Development</h1>
+
+      <audio id="bg-music" loop>
+  <source src="audio/solange-aundio.mp3" type="audio/mpeg">
+</audio>
+
+<button id="toggleMusic">Play Music</button>
+
+      </div>
+
+<div class="featured-works">
+
+<img class="lyrics"src="images/home-text.png" alt="Lyrics from Solange's 'Can I Hold The Mic? (Interlude)'"> 
+
+<div class="featured-images">
+          <h3>Featured Works</h3>
+            <img class="img1" src="images/art.jpg" alt="Image of a piece of art">
+            <img class="img2" src="images/design.jpg" alt="Image of a piece of design">
+            <img class="img3" src="images/web-development.jpg" alt="Image of a piece of web development">
+          </div>
+</div>
+       
+
+<div id="portfolio-popup" style="display: none;">
+  <p>A curated selection of art, branding, visual identity, and design.</p>
+</div>
+ 
+
+<button class="see-work">SEE WORK</button>
+
+</div>
+
+<!-- footer section with name, nav links and social media icons -->
+        <footer class="footer">
+
+  <div class="footer-content">
+
+    <div class="footer-name">
+      <h2>Sisonke Segunda</h2>
+    </div>
+
+    <div class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/hopefordesign/" target="_blank"><img src="images/instagram-2.png" alt="Instagram icon"></a>
+      <a href="https://www.linkedin.com/in/sisonke-segunda-397744250" target="_blank"><img src="images/linkedin.png" alt="LinkedIn icon"></a>
+      <a href="https://www.behance.net/sisonkesegundapro?tracking_source=search_projects%7Cntsundu" target="_blank"><img src="images/behance-2.png" alt="Behance icon"></a>
+    </div>
+
+  </div>
+
+  <!-- Bottom strip -->
+  <div class="footer-bottom">
+    <p>© 2026 Sisonke Segunda. All rights reserved.</p>
+  </div>
+
+</footer>
+
+
+ <script>
+
+const hamburger = document.getElementById("hamburger");
+  const nav = document.querySelector("nav");
+
+  hamburger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+    hamburger.classList.toggle("open");
+  });
+
+const music = document.getElementById("bg-music");
+const toggle = document.getElementById("toggleMusic");
+
+toggle.addEventListener("click", () => {
+  if (music.paused) {
+    music.play();
+    alert("Now Playing: Solange - Can I Hold The Mic? (Interlude) from the album 'When I Get Home' (2019)");
+
+    toggle.textContent = "Pause Music";
+  } else {
+    music.pause();
+    toggle.textContent = "Play Music";
+  }
+});
+
+ 
+</script>
+  </body>
+</html>
